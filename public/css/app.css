@@ -2150,9 +2150,8 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #a1cbef;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(186, 232, 232, 1);
 }
 
 .form-control::-moz-placeholder {
@@ -10929,4 +10928,16 @@ a.text-dark:focus {
 .git-navy:hover{
   font-size: 53px;
   color: #ffd803;
+}
+
+.made-btn-803{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #fff;
+  border-radius: 1em;
+}
+.made-btn-803:hover{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #ffd803;
 }
