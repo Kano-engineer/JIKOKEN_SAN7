@@ -32,16 +32,17 @@
 </div>
 <div class="top-chart">
         <div class="content">
-            <span class="circle circle-target"><img src="images/174743.png" alt="target" width="240px">
+
+            <span class="circle circle-target"><i class="fas fa-flag big-icon"></i>
                 <p class="out-circle target"><span class="txt-bold">目標</span>を設定して駆け抜けよう</p>
             </span>
-            <span class="circle circle-task"><img src="images/163154.png" alt="task" width="240px">
+            <span class="circle circle-task"><i class="fas fa-tasks big-icon"></i></i>
                 <p class="out-circle task">タスク管理で<span class="txt-bold">効率</span>UPを目指そう</p>
             </span>
-            <span class="circle circle-diary"><img src="images/158264.png" alt="diary" width="240px">
+            <span class="circle circle-diary"><i class="fas fa-file-alt big-icon"></i>
                 <p class="out-circle diary">一行日記で続ける<span class="txt-bold">習慣</span>を作ろう</p>
             </span>
-            <span class="circle circle-friend"><img src="images/119085.png" alt="friend" width="240px">
+            <span class="circle circle-friend"><i class="fas fa-users big-icon"></i>
                 <p class="out-circle friend"><span class="txt-bold">仲間</span>と高め合おう</p>
             </span>
         </div>
@@ -56,9 +57,10 @@
                     <p><a class="nav-link top-to-nav" href="{{ route('register') }}">{{ __('Register') }}</a></p>
                 @endif
                 @else
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-success" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle top-to-nav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu top-to-nav" aria-labelledby="navbarDropdown">
+
                         <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}</a>
@@ -89,6 +91,7 @@
 </div>
 
 
-@include('layouts.footer')
+@include('common.footer')
+
 </body>
 </html>
