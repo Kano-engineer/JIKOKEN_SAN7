@@ -32,6 +32,7 @@
 </div>
 <div class="top-chart">
         <div class="content">
+
             <span class="circle circle-target"><i class="fas fa-flag big-icon"></i>
                 <p class="out-circle target"><span class="txt-bold">目標</span>を設定して駆け抜けよう</p>
             </span>
@@ -59,6 +60,7 @@
                     <a id="navbarDropdown" class="nav-link dropdown-toggle top-to-nav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}</a>
                     <div class="dropdown-menu top-to-nav" aria-labelledby="navbarDropdown">
+
                         <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}</a>
@@ -90,5 +92,6 @@
 
 
 @include('common.footer')
+
 </body>
 </html>
