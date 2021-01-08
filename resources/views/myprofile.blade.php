@@ -1,15 +1,6 @@
 @extends('layouts.app')
-@include('common.aside')
 
 @section('content')
-
-
-<div class="linkbox-nav">
-                <p><a　href="{{action('HomeController@index')}}"><i class="fas fa-house-user"></i></a></p>
-</div>
-
-
-
 
 <div class="container">
     <div class="row justify-content-center">

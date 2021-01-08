@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('common.aside')
 
 @section('content')
 
