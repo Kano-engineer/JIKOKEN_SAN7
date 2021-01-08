@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('common.aside')
 
 @section('content')
 <a href="{{action('HomeController@index')}}">
