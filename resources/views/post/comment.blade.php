@@ -4,18 +4,17 @@
 
 @section('content')
 <div class="row justify-content-center">
-   <p>
-        @if( $post -> diary  === NULL)
-            <div class="row justify-content-center">
-              <p class="">todo:{{ $post -> todo }}</p>
-              <p class=""><a href="/userprofile/{{ $post -> id }}">投稿者:　{{ $user_name }}</a></p>
-            </div>
-        @else
-            <div class="row justify-content-center">
-              <p class="">diary:{{ $post -> diary }}</p>
-            </div>
-        @endif
-    </p>
+<div class="col-md-8">
+  <div class="card">
+    <div class="card-body">
+      @if( $post -> diary  === NULL)
+          <h3><i class="fas fa-tasks big-icon"></i>{{ $post -> todo }}</h3>
+      @else
+          <h3><i class="fas fa-file-alt big-icon"></i>{{ $post -> diary }}</h3>
+      @endif
+    </div>
+  </div>
+</div>
  </div>
 
 <div class="">
@@ -27,14 +26,15 @@
 </div>
 
  <div class="row justify-content-center">
-
+ <div class="col-md-8">
         <div class="card">
             <div class="card-body">
                 <form method="post" >
                     {{ csrf_field() }}
-                     <p>コメントを書く</p>
-                     <textarea name="comment" placeholder=""></textarea>
-                         <p><input class="btn btn-primary"  name="todo" type="submit" value="コメントする！"></p>
+                     <p>
+          <p class=""><a href="/userprofile/{{ $post -> id }}" class="a-sky">{{ $user_name }}さん</a>に</p>応援コメントを書いてあげましょう！</p>
+                     <textarea name="comment" placeholder="すげえな！"></textarea>
+                         <p><input class="btn made-btn-803"  name="todo" type="submit" value="コメントする！"></p>
                 </form>
         </div>
 

@@ -2,9 +2,6 @@
 @include('common.aside')
 
 @section('content')
-    <a href="{{action('HomeController@index')}}">
-        <button class="btn btn-sky" type="submit">jikoken</button>
-    </a>
 
 <div class="container">
   <div class="row justify-content-center">

@@ -11013,5 +11013,9 @@ a.text-dark:focus {
   font-size: 30px;
 }
 .text-bold{
-  font-weight: bolder;
+  font-weight: bold;
+  background: linear-gradient(transparent 50%, #ffd803 50%);
+}
+.fa-house-user{
+  font-size: 40px;
 }

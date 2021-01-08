@@ -1,9 +1,6 @@
 @include('common.head')
 @include('common.navbar')
 @section('title','ブックマーク')
-<a href="{{action('HomeController@index')}}">
-    <button class="btn btn-sky" type="submit">jikoken</button>
-</a>
 
 <div class="row justify-content-center">
     <div class="col-md-8">

@@ -2,9 +2,7 @@
 @include('common.navbar')
 @section('title','投稿')
 
-<a href="{{action('HomeController@index')}}">
-     <button class="btn btn-sky" type="submit">jikoken</button>
-</a>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
