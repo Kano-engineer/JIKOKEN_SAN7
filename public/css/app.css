@@ -64,6 +64,18 @@ section {
   display: block;
 }
 
+.sidebar {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 50px;
+  float: left;
+  width: 200px;
+  position: fixed;
+  background-color: #fff;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -2895,6 +2907,7 @@ fieldset:disabled a.btn {
   color: #272343;
   border: solid 3px #272343;
   background-color: #ffd803;
+  font-weight: bolder;
 }
 
 .btn-danger {
@@ -4561,6 +4574,7 @@ input[type=button].btn-block {
   display: flex;
   flex-direction: column;
   padding-left: 0;
+  margin-left: -165px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -5038,14 +5052,18 @@ input[type=button].btn-block {
 }
 
 .btn-sky{
+  background-color: transparent;
+  border: solid 3px transparent;
+  font-weight: bolder;
+  border-radius: 1em;
+  margin-top: 10px;
+}
+.btn-sky:hover{
   color: #272343;
   border: solid 3px #bae8e8;
   background-color: #bae8e8;
-  border-radius: 1em;
-  font-weight: bolder;
-}
-.btn-sky:hover{
-  opacity: 0.5;
+
+
 }
 
 .card-header:first-child {

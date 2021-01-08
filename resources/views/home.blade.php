@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('common.aside')
 
 @section('content')
 
@@ -7,8 +6,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-header head-light">
-                <a href="home/myprofile" class="btn btn-sky">プロフィールへ</a>
-                <a href="/post/timeline" class="btn btn-sky">タイムラインへ</a>
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
@@ -16,7 +13,8 @@
                     @endif
                     <div class="flash-text">{{ __('You are logged in!') }}</div>
             </div>
-            <div class="btn-right"><span class="text-under"> タスクや日記を追加しましょう！</span>
+            <h3 class="text-bold">MY PAGE</h3>
+            <div class="btn-right">タスクや日記を追加しましょう！
                 <a href="{{action('PostController@index')}}">
                     <button class="btn made-btn-803" type="submit">投稿画面へ</button>
                 </a>
@@ -54,6 +52,19 @@
                         @endforeach
                         </ul>
                 </div>
+                <div class="card-header">
+                    <div class="card-inner row justify-content-left">
+                        <p class="posts-title">
+                            <i class="fas fa-file-alt icon-posts"></i><span class="posts-title-bold">MY BOOK MARK</span>
+                        </p>
+                    </div>
+</div>
+                <div class="card-body">
+                    <div class="btn-right">
+                        <a href="{{action('BookmarkController@index')}}" class="btn made-btn-803">後でみるサイトを保管します</a>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
