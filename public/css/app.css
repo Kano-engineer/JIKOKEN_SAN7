@@ -64,6 +64,18 @@ section {
   display: block;
 }
 
+.sidebar {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 50px;
+  float: left;
+  width: 200px;
+  position: fixed;
+  background-color: #fff;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -253,12 +265,25 @@ button:focus {
 input,
 button,
 select,
-optgroup,
-textarea {
+optgroup{
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+  width: 500px;
+  height: auto;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.input-right{
+  display: block;
+  margin: 0 0 0 auto;
 }
 
 button,
@@ -307,10 +332,6 @@ input[type=checkbox] {
   padding: 0;
 }
 
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
 
 fieldset {
   min-width: 0;
@@ -2830,6 +2851,11 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(97, 157, 206, 0.5);
 }
 
+.btn-right{
+  text-align: right;
+  margin-bottom: 10px;
+}
+
 .btn-warning {
   color: #272343;
   background-color: #ffd803;
@@ -2869,6 +2895,19 @@ fieldset:disabled a.btn {
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-warning.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(222, 207, 69, 0.5);
+}
+
+.made-btn-803{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #fff;
+  border-radius: 1em;
+}
+.made-btn-803:hover{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #ffd803;
+  font-weight: bolder;
 }
 
 .btn-danger {
@@ -4535,6 +4574,7 @@ input[type=button].btn-block {
   display: flex;
   flex-direction: column;
   padding-left: 0;
+  margin-left: -165px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -4939,10 +4979,11 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: none;
   border-radius: 0.25rem;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px 4px rgba(216, 217, 219, 0.5);
 }
 
 .card > hr {
@@ -4976,6 +5017,7 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background-color: #fff;
 }
 
 .card-title {
@@ -5001,19 +5043,27 @@ input[type=button].btn-block {
 
 .card-header {
   padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
   background-color: #272343;
   color: #fffffe;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+.head-light{
+  background-color: transparent;
 }
 
 .btn-sky{
-  color: #272343;
-  background-color: #bae8e8;
+  background-color: transparent;
+  border: solid 3px transparent;
+  font-weight: bolder;
   border-radius: 1em;
+  margin-top: 10px;
 }
 .btn-sky:hover{
-  letter-spacing: 5px;
+  color: #272343;
+  border: solid 3px #bae8e8;
+  background-color: #bae8e8;
+
+
 }
 
 .card-header:first-child {
@@ -7517,6 +7567,7 @@ button.bg-dark:focus {
 
 .justify-content-between {
   justify-content: space-between !important;
+  margin: 20px;
 }
 
 .justify-content-around {
@@ -10927,4 +10978,62 @@ a.text-dark:focus {
     opacity: 1;
     color: #272343;
   }
+}
+
+.posts-title{
+  font-size: 20px;
+}
+.posts-title-bold{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.fa-caret-right{
+  margin-left: 10px;
+  font-size: 20px;
+}
+.big-icon-posts{
+  font-size: 80px;
+}
+.icon-posts{
+  font-size: 40px;
+  margin: 5px;
+}
+.send-to{
+  text-align: center;
+  margin: 80px;
+}
+.send-link:hover{
+  color: #ffd803;
+}
+.text-under{
+  margin-right: 10px;
+  border-bottom: double 7px #ffd803;
+}
+.a-sky{
+  color: #bae8e8;
+}
+.a-sky:visited{
+  color: #7ee4e4;
+}
+.li-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fa-thumbs-up{
+  color: #ffd803;
+  margin-left: 5px;
+}
+.fa-comment-dots{
+  display: block;
+  text-align: right;
+  font-size: 30px;
+}
+.text-bold{
+  font-weight: bold;
+  background: linear-gradient(transparent 50%, #ffd803 50%);
+}
+.fa-house-user{
+  font-size: 40px;
 }
