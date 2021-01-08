@@ -1,5 +1,6 @@
 @include('common.head')
 @include('common.navbar')
+@include('common.aside')
 
 @section('title','目標')
 <a href="{{action('HomeController@index')}}">

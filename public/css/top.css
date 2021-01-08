@@ -11077,8 +11077,7 @@ blockquote p{
     background-color: #ffd803;
     border-radius: 1em;
   }
-  .top-to-dropdown:hover{
+.top-to-dropdown:hover{
     color: #272343;
     background-color: #fff;
-  }
 }

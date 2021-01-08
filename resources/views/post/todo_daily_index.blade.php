@@ -1,4 +1,5 @@
 @include('common.head')
+@include('common.aside')
 @include('common.navbar')
 
 @section('title','投稿')

@@ -1,7 +1,8 @@
 @include('common.head')
 @include('common.navbar')
+@include('common.aside')
 @section('title','ブックマーク')
-<a href="{{action('HomeController@index')}}">
+<a href="{{action('HomeController@showMyProfile')}}">
     <button class="btn btn-danger" type="submit">jikoken</button>
 </a>
 
