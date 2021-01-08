@@ -253,12 +253,25 @@ button:focus {
 input,
 button,
 select,
-optgroup,
-textarea {
+optgroup{
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+  width: 500px;
+  height: auto;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.input-right{
+  display: block;
+  margin: 0 0 0 auto;
 }
 
 button,
@@ -307,10 +320,6 @@ input[type=checkbox] {
   padding: 0;
 }
 
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
 
 fieldset {
   min-width: 0;
@@ -10986,8 +10995,23 @@ a.text-dark:focus {
 .a-sky{
   color: #bae8e8;
 }
+.a-sky:visited{
+  color: #7ee4e4;
+}
 .li-ellipsis{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.fa-thumbs-up{
+  color: #ffd803;
+  margin-left: 5px;
+}
+.fa-comment-dots{
+  display: block;
+  text-align: right;
+  font-size: 30px;
+}
+.text-bold{
+  font-weight: bolder;
 }

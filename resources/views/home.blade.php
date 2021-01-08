@@ -18,7 +18,7 @@
             </div>
             <div class="btn-right"><span class="text-under"> タスクや日記を追加しましょう！</span>
                 <a href="{{action('PostController@index')}}">
-                    <button class="btn made-btn-803" type="submit">newpost(todo/diary)</button>
+                    <button class="btn made-btn-803" type="submit">投稿画面へ</button>
                 </a>
             </div>
             <div class="card">
