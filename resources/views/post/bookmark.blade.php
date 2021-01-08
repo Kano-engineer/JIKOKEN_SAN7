@@ -2,7 +2,7 @@
 @include('common.navbar')
 @section('title','ブックマーク')
 <a href="{{action('HomeController@index')}}">
-    <button class="btn btn-danger" type="submit">jikoken</button>
+    <button class="btn btn-sky" type="submit">jikoken</button>
 </a>
 
 <div class="row justify-content-center">

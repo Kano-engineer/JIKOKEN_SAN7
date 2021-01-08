@@ -6,24 +6,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <div class="card-body">
+                <div class="card-header">
+                    <a href="home/myprofile" class="btn btn-sky">プロフィールへ</a>
+                    <a href="/post/timeline" class="btn btn-sky">タイムラインへ</a>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                              {{ session('status') }}
                         </div>
                     @endif
-                    {{ __('You are logged in!') }}
-                    <p><a href="home/myprofile">マイページへ</a<></p>
+                    <div class="flash-text">{{ __('You are logged in!') }}</div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row justify-content-center">
+                <div class="card-body">
+                <div class="row justify-content-center">
     <a href="{{action('PostController@index')}}">
-         <button class="btn btn-danger" type="submit">newpost(todo/diary)</button>
+         <button class="btn btn-warning" type="submit">newpost(todo/diary)</button>
     </a>
 </div>
 <div class="row justify-content-center">
@@ -51,11 +47,18 @@
 
 <div class="row justify-content-center">
     <a href="{{action('BookmarkController@index')}}">
-         <button class="btn btn-danger" type="submit">bookmark</button>
+         <button class="btn btn-warning" type="submit">bookmark</button>
     </a>
 </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="row justify-content-center">
-     <a href="/post/timeline"></a>
+     
 </div>
 @endsection
