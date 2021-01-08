@@ -3,7 +3,7 @@
 
 @section('title','投稿')
 <a href="{{action('HomeController@index')}}">
-     <button class="btn btn-danger" type="submit">jikoken</button>
+     <button class="btn btn-sky" type="submit">jikoken</button>
 </a>
 
 <div class="row justify-content-center">
@@ -19,11 +19,11 @@
                             <p>DIARY:お母さんのお手伝いをしました。喜んでいました。</p>
                                 <textarea name="todo" placeholder=""></textarea>
                                  <input type="hidden" name="user_id"  value="{{Auth::user()->id}}">
-                                <p><button class="btn btn-primary"type="submit">TODOを作成</button></p>
+                                <p><button class="btn btn-warning"type="submit">TODOを作成</button></p>
 
                                 <textarea name="diary" placeholder=""></textarea>
                                  <input type="hidden" name="user_id"  value="{{Auth::user()->id}}">
-                                <p><button class="btn btn-danger"type="submit">DIARYを作成</button></p>
+                                <p><button class="btn btn-warning"type="submit">DIARYを作成</button></p>
                     </form>
                 </div>
             </div>

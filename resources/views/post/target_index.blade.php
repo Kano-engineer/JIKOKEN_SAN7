@@ -3,7 +3,7 @@
 
 @section('title','目標')
 <a href="{{action('HomeController@index')}}">
-    <button class="btn btn-danger" type="submit">jikoken</button>
+    <button class="btn btn-sky" type="submit">jikoken</button>
 </a>
 
 <div class="row justify-content-center">
@@ -23,7 +23,7 @@
 
                     <textarea name="middle" placeholder=""></textarea>
                      <input type="hidden" name="user_id"  value="{{Auth::user()->id}}">
-                         <p><button class="btn btn-danger"  type="submit">MIDDLEを作成</button></p>
+                         <p><button class="btn btn-warning"  type="submit">MIDDLEを作成</button></p>
                 </form>
                 </div>
             </div>

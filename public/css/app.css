@@ -2830,6 +2830,10 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(97, 157, 206, 0.5);
 }
 
+.btn-right{
+text-align: right;
+}
+
 .btn-warning {
   color: #272343;
   background-color: #ffd803;
@@ -4941,8 +4945,10 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: none;
   border-radius: 0.25rem;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px 4px rgba(216, 217, 219, 0.5);
 }
 
 .card > hr {
@@ -7517,6 +7523,7 @@ button.bg-dark:focus {
 
 .justify-content-between {
   justify-content: space-between !important;
+  margin: 20px;
 }
 
 .justify-content-around {
@@ -10927,4 +10934,27 @@ a.text-dark:focus {
     opacity: 1;
     color: #272343;
   }
+}
+
+.posts-title{
+  font-size: 20px;
+}
+.posts-title-bold{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.fa-caret-right{
+  margin-left: 10px;
+  font-size: 20px;
+}
+.big-icon-posts{
+  font-size: 80px;
+}
+.send-to{
+  text-align: center;
+  margin: 80px;
+}
+.send-link:hover{
+  color: #ffd803;
 }

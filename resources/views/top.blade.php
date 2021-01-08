@@ -35,7 +35,7 @@
             <span class="circle circle-target"><i class="fas fa-flag big-icon"></i>
                 <p class="out-circle target"><span class="txt-bold">目標</span>を設定して駆け抜けよう</p>
             </span>
-            <span class="circle circle-task"><i class="fas fa-tasks big-icon"></i></i>
+            <span class="circle circle-task"><i class="fas fa-tasks big-icon"></i>
                 <p class="out-circle task">タスク管理で<span class="txt-bold">効率</span>UPを目指そう</p>
             </span>
             <span class="circle circle-diary"><i class="fas fa-file-alt big-icon"></i>
