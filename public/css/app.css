@@ -2831,7 +2831,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-right{
-text-align: right;
+  text-align: right;
+  margin-bottom: 10px;
 }
 
 .btn-warning {
@@ -2873,6 +2874,18 @@ text-align: right;
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-warning.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(222, 207, 69, 0.5);
+}
+
+.made-btn-803{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #fff;
+  border-radius: 1em;
+}
+.made-btn-803:hover{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #ffd803;
 }
 
 .btn-danger {
@@ -4943,7 +4956,6 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
   background-clip: border-box;
   border: none;
   border-radius: 0.25rem;
@@ -4982,6 +4994,7 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background-color: #fff;
 }
 
 .card-title {
@@ -5007,19 +5020,23 @@ input[type=button].btn-block {
 
 .card-header {
   padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
   background-color: #272343;
   color: #fffffe;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+.head-light{
+  background-color: transparent;
 }
 
 .btn-sky{
   color: #272343;
+  border: solid 3px #bae8e8;
   background-color: #bae8e8;
   border-radius: 1em;
+  font-weight: bolder;
 }
 .btn-sky:hover{
-  letter-spacing: 5px;
+  opacity: 0.5;
 }
 
 .card-header:first-child {
@@ -10951,10 +10968,26 @@ a.text-dark:focus {
 .big-icon-posts{
   font-size: 80px;
 }
+.icon-posts{
+  font-size: 40px;
+  margin: 5px;
+}
 .send-to{
   text-align: center;
   margin: 80px;
 }
 .send-link:hover{
   color: #ffd803;
+}
+.text-under{
+  margin-right: 10px;
+  border-bottom: double 7px #ffd803;
+}
+.a-sky{
+  color: #bae8e8;
+}
+.li-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
