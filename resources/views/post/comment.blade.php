@@ -34,7 +34,7 @@
                     {{ csrf_field() }}
                      <p>コメントを書く</p>
                      <textarea name="comment" placeholder=""></textarea>
-                         <p><input class="btn btn-primary" name="todo" type="submit" value="コメントする！"></p>
+                         <p><input class="btn btn-primary"  name="todo" type="submit" value="コメントする！"></p>
                 </form>
         </div>
 

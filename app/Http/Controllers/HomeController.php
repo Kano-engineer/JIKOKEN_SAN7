@@ -26,9 +26,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+   public function index()
     {
-         return view('home');
+        
+        $tasks = Post::whereNotNull('todo')->get();
+        $diaries = Post::whereNotNull('diary')->get();
+         //$diaries = DB::table('posts')->whereNotNull(['diary','created_at'])->get();
+        return view('home',['tasks' =>$tasks],['diaries'=>$diaries],);
+
     }
 
     /**
@@ -46,7 +51,7 @@ class HomeController extends Controller
     {
          return view('myprofile');
     }
-    
+
     //ユーザープロフィール画面を表示
     public function showUserProfile($id)
     {

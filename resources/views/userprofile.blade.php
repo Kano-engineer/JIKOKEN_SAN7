@@ -9,15 +9,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                 　<h1>プロフィール</h>
+                 　<h1>プロフィール</h1>
                 </div>
                 <div class="card-body">
                 　<div style="margin-top: 30px;">
-   　　　　　　　　　　<table class="table table-striped">  
+   　　　　　　　　　　<table class="table table-striped">
    　　　　　　　　　　　<tr>
    　　　　　　　　　　　　<th>氏名</th>
    　　　　　　　　　　　　<td>{{ $user -> name }}</td>
-   　　　　　　　　　　　</tr>  
+   　　　　　　　　　　　</tr>
    　　　　　　　　　　　<tr>
    　　　　　　　　　　　　<th>投稿</th>
                           @foreach ( $posts as $post )
@@ -27,7 +27,7 @@
                               <td>diary：{{ $post -> diary }}</td>
                             @endif
                           @endforeach
-   　　　　　　　　　　　</tr>  
+   　　　　　　　　　　　</tr>
    　　　　　　　　　　</table>
    　　　　　　　　　</div>
                 </div>

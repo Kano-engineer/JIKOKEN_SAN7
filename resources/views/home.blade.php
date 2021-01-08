@@ -26,6 +26,28 @@
          <button class="btn btn-danger" type="submit">newpost(todo/diary)</button>
     </a>
 </div>
+<div class="row justify-content-center">
+  <p>task</p>
+</div>
+<div class="row justify-content-center">
+<ul>
+    @foreach ($tasks as $task)
+    <li>{{$task->todo}}</li>
+    @endforeach
+</ul>
+</div>
+
+<div class="row justify-content-center">
+  <p>diary</p>
+</div>
+
+<div class="row justify-content-center">
+<ul>
+    @foreach ($diaries as $diary)
+    <li>{{$diary->diary}}</li>
+    @endforeach
+</ul>
+</div>
 
 <div class="row justify-content-center">
     <a href="{{action('BookmarkController@index')}}">

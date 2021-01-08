@@ -8,7 +8,7 @@
            <button class="btn btn-danger" type="submit">newpost(targets)</button>
         </a>
      <h4>Everyone's post</h4>
-        <a href="/post/timeline">
+        <a href="{{action('PostController@showTimeline')}}">
            <button class="btn btn-danger" type="submit">more</button>
         </a>
    </div>
