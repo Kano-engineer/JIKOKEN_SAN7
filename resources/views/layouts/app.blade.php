@@ -8,8 +8,8 @@
     <main class="py-4">
         @yield('content')
     </main>
-    <aside>
+    <a>
         @yield('aside')
-    </aside>
+    </a>
 </body>
 </html>

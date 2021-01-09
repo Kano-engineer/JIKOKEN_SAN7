@@ -12,20 +12,19 @@
 
                 
                     <!-- Right Side Of Navbar -->
+
                     @if ( Auth::check() )
                     <ul class="navbar-nav mr-auto">
                         <div class="sidebar">
                             <div class="sidebar-item">
-                            <h2>
-                            {{ Auth::user()->name }}</h2>
-                                <h5>こちらにBIG目標表示</h5>
-                                <p>そのためにこれをします</p>
-                                 こちらに目標表示<hr>
-                                <p>新しい目標ができましたか？</p>
-                                <a href="{{action('TargetController@index')}}" class="btn made-btn-803">目標投稿画面へ</a><hr>
-                                <a href="/home/myprofile" class="btn btn-sky">プロフィールへ</a>
-                                <a href="/post/timeline" class="btn btn-sky">タイムラインへ</a>
-                                <a href="{{action('HomeController@index')}}" class="btn btn-sky">マイページへ</a>
+                                <h2>{{ Auth::user()->name }}</h2>
+                                    <p><a href="/home/myprofile" class="a-sky">登録情報</a></p>
+                                <div class="btn-sidebar">
+                                    <a href="/post/timeline" class="btn btn-sky btn-block">タイムライン</a>
+                                    <a href="{{action('HomeController@index')}}" class="btn btn-sky btn-block">マイページ</a>
+                                    <a href="{{action('TargetController@index')}}" class="btn btn-sky btn-block">目標を投稿</a>
+                                    <a href="{{action('PostController@index')}}" class="btn btn-sky btn-block">TODO/日記を投稿</a>
+                                </div>
                             </div>
                         </div>
                     </ul>
