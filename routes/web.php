@@ -49,13 +49,16 @@ Route::post('/post/target','TargetController@post');
 Route::get('/post/send','TargetController@send');
 
 //ブックマーク画面へ遷移
-Route::get('/post/bookmark','BookmarkController@index');
+Route::get('/post/bookmark/{id}','BookmarkController@index');
 
 //ブックマークを作成して、画面遷移
-Route::post('/post/bookmark','BookmarkController@post');
+Route::post('/post/bookmark/{id}','BookmarkController@post');
 
 //ブックマークを作成完了画面へ遷移
 Route::get('/post/send','BookmarkController@send');
+
+//ブックマークリスト画面へ遷移
+Route::get('/post/bookmark_list/{id}','BookmarkController@showList');
 
 //timelineを表示
 Route::get('/post/timeline','PostController@showTimeline')->name('showTimeline');

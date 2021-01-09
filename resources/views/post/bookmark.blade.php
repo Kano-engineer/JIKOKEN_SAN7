@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <form method="post" action="">
                             {{ csrf_field() }}
-                                <input type="hidden" name="user_id"  value="{{Auth::user()->id}}">
+                                <input type="hidden" name="user_id"  value="{{$user->id}}">
                                 <h1>ブックマーク登録</h1>
                                 <ul style="list-style: none;">
                                     <li>タイトル<input type="text" name="title"></li>
