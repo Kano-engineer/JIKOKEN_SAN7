@@ -10,24 +10,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
 
-
+                
                     <!-- Right Side Of Navbar -->
+                    @if ( Auth::check() )
                     <ul class="navbar-nav mr-auto">
                         <div class="sidebar">
                             <div class="sidebar-item">
-                            <h2>{{ Auth::user()->name }}</h2>
+                            <h2>
+                            {{ Auth::user()->name }}</h2>
                                 <h5>こちらにBIG目標表示</h5>
                                 <p>そのためにこれをします</p>
-                                <!-- こちらに目標表示 --><hr>
+                                 こちらに目標表示<hr>
                                 <p>新しい目標ができましたか？</p>
                                 <a href="{{action('TargetController@index')}}" class="btn made-btn-803">目標投稿画面へ</a><hr>
-                                <a href="home/myprofile" class="btn btn-sky">プロフィールへ</a>
+                                <a href="/home/myprofile" class="btn btn-sky">プロフィールへ</a>
                                 <a href="/post/timeline" class="btn btn-sky">タイムラインへ</a>
                                 <a href="{{action('HomeController@index')}}" class="btn btn-sky">マイページへ</a>
                             </div>
                         </div>
                     </ul>
-                    
+                    @endif
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
