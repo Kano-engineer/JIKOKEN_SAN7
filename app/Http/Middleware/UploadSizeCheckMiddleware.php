@@ -20,12 +20,14 @@ class UploadSizeCheckMiddleware
             $post_max_size = $this->return_bytes(ini_get('post_max_size'));
             $uploaded_size = intval($_SERVER['CONTENT_LENGTH']);                          
             
+
             if($post_max_size < $uploaded_size ){
                 return redirect('/')->with('message', 'ファイルサイズが大きすぎます。');                                                
             }
         }                
         return $next($request);
     }
+
     
     public function return_bytes($val) {
         
@@ -43,3 +45,4 @@ class UploadSizeCheckMiddleware
         return intval($_val) * 1024;
     }
 }
+

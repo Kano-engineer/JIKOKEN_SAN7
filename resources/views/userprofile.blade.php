@@ -28,6 +28,8 @@
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">
+                       <!-- プロフィール画像を表示 -->
+                       <p><img src="{{ asset('storage/profileImg/'.$user -> my_pic) }}" alt="プロフィール画像"></p>
           <h2>{{ $user -> name }}の投稿一覧</h2>
         </div>
         <div class="card-body">
