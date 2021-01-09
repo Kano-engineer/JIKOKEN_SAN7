@@ -49,13 +49,16 @@ Route::post('/post/target','TargetController@post');
 Route::get('/post/send','TargetController@send');
 
 //ブックマーク画面へ遷移
-Route::get('/post/bookmark','BookmarkController@index');
+Route::get('/post/bookmark/{id}','BookmarkController@index');
 
 //ブックマークを作成して、画面遷移
-Route::post('/post/bookmark','BookmarkController@post');
+Route::post('/post/bookmark/{id}','BookmarkController@post');
 
 //ブックマークを作成完了画面へ遷移
 Route::get('/post/send','BookmarkController@send');
+
+//ブックマークリスト画面へ遷移
+Route::get('/post/bookmark_list/{id}','BookmarkController@showList');
 
 //timelineを表示
 Route::get('/post/timeline','PostController@showTimeline')->name('showTimeline');
@@ -65,6 +68,15 @@ Route::get('/post/comment/{id}','PostController@showComment')->name('showComment
 
 //timelineのコメント投稿
 Route::post('/post/comment/{id}','PostController@postComment');
+
+//timelineのコメント編集ページへ移動
+Route::get('/post/commentedit/{id}/{comment_id}','PostController@editComment')->name('editComment');
+
+//timelineのコメント編集ページへ移動
+Route::post('/post/commentedit/{id}/{comment_id}','PostController@postEditComment')->name('postEditComment');
+
+//timelineのコメントを削除
+Route::get('/post/commentdelete/{id}/{comment_id}','PostController@deleteComment')->name('deleteComment');
 
 //ユーザープロフィール画面へ遷移
 Route::get('/userprofile/{id}', 'HomeController@showUserProfile')->name('userprofile');

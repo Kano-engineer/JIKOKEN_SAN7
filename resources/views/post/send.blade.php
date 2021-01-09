@@ -13,6 +13,9 @@
                         <p><a href="/post/timeline" class="send-link">
                             <i class="fas fa-users big-icon-posts"></i><br>タイムラインへ</a>
                         </p>
+                        <p><a href="/post/bookmark_list/{{ $user->id }}" class="send-link">
+                            <i class="fas fa-users big-icon-posts"></i><br>ブックマークリストを確認！</a>
+                        </p>
                     </div>
                     <div class="row justify-content-center send-to">
                         <p><a href="/home" class="send-link">

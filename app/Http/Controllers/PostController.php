@@ -69,12 +69,86 @@ class PostController extends Controller
     }
 
     //timelineのコメントを投稿
-    public function postComment(Request $request_comment)
+    public function postComment(Request $request_comment,$id)
     {
-    //データを受け取る
-             $input = $request_comment->all();
-             Comment::create($input);
-         return redirect(route('showComment'));
+        //timelineのpostから詳細投稿を取得
+        $post=Post::find($id);
+
+        //投稿者を判別するためのリレーション処理
+        $user_name = Post::find($id)->user->name;
+
+
+       //データを受け取る
+        $input = $request_comment->all();
+  
+        Comment::create($input);
+        $comments=Comment::all();
+
+        //withメソッドで値をviewへ返す
+        return view('post.comment',['post' => $post],['comments' => $comments])->with('user_name',$user_name);
     }
 
+    //timelineのコメント編集画面へ遷移
+    public function editComment($id,$comment_id){
+        //timelineのpostから詳細投稿を取得
+        $post=Post::find($id);
+
+        //投稿者を判別するためのリレーション処理
+        $user_name = Post::find($id)->user->name;
+
+        //コメントを全て取ってくる
+        //$comments=Comment::all();
+        $comment=Comment::find($comment_id);
+
+        //withメソッドで値をviewへ返す
+        return view('post.commentedit',['post' => $post],['comment' => $comment])->with('user_name',$user_name);
+    }
+
+    //timelineのコメントを編集
+    public function postEditComment(Request $request)
+    {
+        //timelineのpostから詳細投稿を取得
+        $post=Post::find($id);
+
+        //投稿者を判別するためのリレーション処理
+        $user_name = Post::find($id)->user->name;
+
+
+       //データを受け取る
+        $edit_comment=$request->comment;
+        $edit_comment_id = $request->comment_id;
+        
+        //$comment_idを持つコメントレコードを削除
+        $deletecomment = \App\Comment::find($edit_comment_id);
+        $deletecomment->delete();
+
+        //データを受け取る
+        $input = $request_comment->all();
+  
+        Comment::create($input);
+        $comments=Comment::all();
+
+        //withメソッドで値をviewへ返す
+        return view('post.comment',['post' => $post],['comments' => $comments])->with('user_name',$user_name);
+    }
+
+    
+    //timelineのコメントを削除
+    public function deleteComment($id,$comment_id){
+        //timelineのpostから詳細投稿を取得
+        $post=Post::find($id);
+
+        //投稿者を判別するためのリレーション処理
+        $user_name = Post::find($id)->user->name;
+
+        //$comment_idを持つコメントレコードを削除
+        $deletecomment = \App\Comment::find($comment_id);
+        $deletecomment->delete();
+
+        //コメントを全て取ってくる
+        $comments=Comment::all();
+
+        //withメソッドで値をviewへ返す
+        return view('post.comment',['post' => $post],['comments' => $comments])->with('user_name',$user_name);
+    }
 }

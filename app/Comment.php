@@ -11,10 +11,10 @@ class Comment extends Model
 
     //可変項目(変わる項目)
     protected $fillable =
-    [
-        'comment',
-        'post_id'
-    ];
+    [   'post_id',
+        'comment'
+    ]; 
+
 
     //Postモデルから唱えるとPostにアクセスできる
     public function post(){

@@ -32,10 +32,11 @@
 </div>
 <div class="top-chart">
         <div class="content">
+
             <span class="circle circle-target"><i class="fas fa-flag big-icon"></i>
                 <p class="out-circle target"><span class="txt-bold">目標</span>を設定して駆け抜けよう</p>
             </span>
-            <span class="circle circle-task"><i class="fas fa-tasks big-icon"></i>
+            <span class="circle circle-task"><i class="fas fa-tasks big-icon"></i></i>
                 <p class="out-circle task">タスク管理で<span class="txt-bold">効率</span>UPを目指そう</p>
             </span>
             <span class="circle circle-diary"><i class="fas fa-file-alt big-icon"></i>
@@ -83,13 +84,9 @@
         また、自己研鑽を積む仲間の刺激的な姿もあなたを強くするのに必要なものとなるでしょう。</p>
     </div>
 </div>
-<footer>
-    <div class="footer-wrapper">
-        <div class="footer-container">
-            <p><a href="https://github.com/Kano-engineer/JIKOKEN_SAN7.git">
-            <i class="fab fa-github fa-fw git-navy"></i></a></p>
-        </div>
-    </div>
-</footer>
+
+
+@include('common.footer')
+
 </body>
 </html>

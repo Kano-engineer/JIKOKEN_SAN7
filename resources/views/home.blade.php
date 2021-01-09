@@ -61,7 +61,8 @@
 </div>
                 <div class="card-body">
                     <div class="btn-right">
-                        <a href="{{action('BookmarkController@index')}}" class="btn made-btn-803">後でみるサイトを保管します</a>
+                        <a href="/post/bookmark/{{ Auth::user()->id }}" class="btn made-btn-803">後でみるサイトを保管します</a>
+                        <a href="/post/bookmark_list/{{ Auth::user()->id }}">ブックマークリストへ</a>
                     </div>
                 </div>
             </div>
