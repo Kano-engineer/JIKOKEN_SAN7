@@ -13,6 +13,7 @@
                 </div>
                 <div class="card-body">
                 　<div style="margin-top: 30px;">
+
                    <!-- プロフィール画像を表示 -->
                     <img src="{{ asset('storage/profileImg/'.Auth::user()->my_pic) }}" alt="プロフィール画像">
 
@@ -22,6 +23,7 @@
                     <input type="hidden" value="{{ Auth::user()->id }}">
                     <p><button class="btn btn-danger" type="submit">画像を送信</button></p>
                 </form>
+
 
    　　　　　　　　　　<table class="table table-striped">  
    　　　　　　　　　　　<tr>

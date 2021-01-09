@@ -11,7 +11,7 @@ class Comment extends Model
 
     //可変項目(変わる項目)
     protected $fillable =
-    [
+    [   'post_id',
         'comment'
     ]; 
 

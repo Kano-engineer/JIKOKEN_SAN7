@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
 
 Auth::routes();
@@ -51,6 +51,15 @@ Route::get('/post/comment/{id}','PostController@showComment')->name('showComment
 
 //timelineのコメント投稿
 Route::post('/post/comment/{id}','PostController@postComment');
+
+//timelineのコメント編集ページへ移動
+Route::get('/post/commentedit/{id}/{comment_id}','PostController@editComment')->name('editComment');
+
+//timelineのコメント編集ページへ移動
+Route::post('/post/commentedit/{id}/{comment_id}','PostController@postEditComment')->name('postEditComment');
+
+//timelineのコメントを削除
+Route::get('/post/commentdelete/{id}/{comment_id}','PostController@deleteComment')->name('deleteComment');
 
 //ユーザープロフィール画面へ遷移
 Route::get('/userprofile/{id}', 'HomeController@showUserProfile')->name('userprofile');

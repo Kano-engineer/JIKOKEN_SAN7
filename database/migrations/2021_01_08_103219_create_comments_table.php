@@ -17,11 +17,10 @@ class CreateCommentsTable extends Migration
             Schema::create('comments', function (Blueprint $table) {
                 $table->id();
                 //追加 user_idの作成
-                $table->unsignedBigInteger('post_id');
+                //$table->unsignedBigInteger('post_id');
+                $table->text('post_id');
                 $table->text('comment');
                 $table->timestamps();
-                //追加　user_idに外部キー制約をつけますよ。usersテーブルのidカラムを参照してそのカラムがなくなったらカスケード的に処理します。
-                $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             });
         } 
     }
