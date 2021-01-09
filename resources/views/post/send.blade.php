@@ -11,12 +11,12 @@
                     <h1 class="row justify-content-center">OK!送信できました！</h1>
                     <div class="row justify-content-center send-to">
                         <p><a href="/post/timeline" class="send-link">
-                            <i class="fas fa-users big-icon-posts"></i><br>タイムラインで確認！</a>
+                            <i class="fas fa-users big-icon-posts"></i><br>タイムラインへ</a>
                         </p>
                     </div>
                     <div class="row justify-content-center send-to">
                         <p><a href="/home" class="send-link">
-                            <i class="fas fa-user big-icon-posts"></i><br>マイページへ戻る</a>
+                            <i class="fas fa-user big-icon-posts"></i><br>マイページへ</a>
                         </p>
                     </div>
                 </div>
