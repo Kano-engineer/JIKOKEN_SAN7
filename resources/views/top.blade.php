@@ -57,16 +57,11 @@
                     <p><a class="nav-link top-to-nav" href="{{ route('register') }}">{{ __('Register') }}</a></p>
                 @endif
                 @else
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle top-to-nav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle top-to-dropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}</a>
-                    <div class="dropdown-menu top-to-nav" aria-labelledby="navbarDropdown">
-
-                        <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                    <div class="dropdown-menu top-to-dropdown" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('home') }}">
+                        MY Pageへ</a>
                     </div>
          @endguest
     </div>

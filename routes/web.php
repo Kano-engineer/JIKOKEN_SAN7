@@ -27,7 +27,6 @@ Route::get('/home/myprofile', 'HomeController@showMyProfile')->name('profile');
 //マイプロフィール画面から画像をアップする
 Route::post('/home/myprofile', 'HomeController@storeMyImg')->name('storeImg');
 
-
 Route::get('/post', 'HomeController@push')->name('push');
 
 //todoとdiary作成画面へ遷移
@@ -36,12 +35,27 @@ Route::get('/post/todo_daily','PostController@index');
 //todoとdiary作成して、画面遷移
 Route::post('/post/todo_daily','PostController@post');
 
-//todoとdiary作成完了画面へ遷移
+//todoとdiary作成完了画面へ遷移 
+// ➡︎不要？
 Route::get('/post/send','PostController@send');
 
+//target作成画面へ遷移
 Route::get('/post/target','TargetController@index');
 
+//bigとmiddle作成して、画面遷移
+Route::post('/post/target','TargetController@post');
+
+//bigとmiddle作成完了画面へ遷移
+Route::get('/post/send','TargetController@send');
+
+//ブックマーク画面へ遷移
 Route::get('/post/bookmark','BookmarkController@index');
+
+//ブックマークを作成して、画面遷移
+Route::post('/post/bookmark','BookmarkController@post');
+
+//ブックマークを作成完了画面へ遷移
+Route::get('/post/send','BookmarkController@send');
 
 //timelineを表示
 Route::get('/post/timeline','PostController@showTimeline')->name('showTimeline');

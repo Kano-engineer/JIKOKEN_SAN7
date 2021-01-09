@@ -2925,7 +2925,6 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
-.btn-light.disabled,
 .btn-light:disabled {
   color: #212529;
   background-color: #f8f9fa;
@@ -10921,6 +10920,7 @@ a.text-dark:focus {
   height: 100%;
   transform: rotate3d(0,0,1,-45deg) translate3d(0,-120%,0);
 }
+
 @-webkit-keyframes shine {
   0% {transform: rotate3d(0,0,1,-45deg) translate3d(0,-120%,0);background: rgba(255,255,255,0.5);}
   100% {transform: rotate3d(0,0,1,-25deg) translate3d(0,150%,0);background: rgba(255,255,255,0.5);}
@@ -10939,6 +10939,7 @@ a.text-dark:focus {
 
 
 /*チャートつくる*/
+
 .top-chart{
   display:flex;
   justify-content: center;
@@ -10967,6 +10968,7 @@ a.text-dark:focus {
 }
 .out-circle{
   margin-top: 17px;
+}
 
 .txt-bold{
   font-weight: bold;
@@ -10989,7 +10991,6 @@ a.text-dark:focus {
 
   color: #272343;
   border: solid 3px #272343;
-
   background-color: #fff;
   border-radius: 1em;
 }
@@ -11031,16 +11032,61 @@ blockquote p{
 .f-txt {animation-delay: 4.6s;
 }
 .quotation-JIKOKEN{
-
   text-align: center;
   font-size:8px;
   text-align: right;
   animation-delay: 4.9s;
 }
 
-
 .out-container{
   text-align: center;
   margin: 50px auto;
 }
 
+
+/*ここからfooter作業*/
+/*
+.footer-wrapper {
+  height: 200px;
+}
+*/
+
+.footer-container{
+  width: 100%;
+  min-height: 80px;
+  padding: 20px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.git-navy{
+  font-size: 50px;
+  color: #272343;
+}
+.git-navy:hover{
+  font-size: 53px;
+  color: #ffd803;
+}
+
+.made-btn-803{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #fff;
+  border-radius: 1em;
+}
+.made-btn-803:hover{
+  color: #272343;
+  border: solid 3px #272343;
+  background-color: #ffd803;
+}
+
+.top-to-dropdown{
+    color: #272343;
+    border: solid 3px #272343;
+    background-color: #ffd803;
+    border-radius: 1em;
+  }
+  .top-to-dropdown:hover{
+    color: #272343;
+    background-color: #fff;
+  }
