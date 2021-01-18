@@ -80,3 +80,6 @@ Route::get('/post/commentdelete/{id}/{comment_id}','PostController@deleteComment
 
 //ユーザープロフィール画面へ遷移
 Route::get('/userprofile/{id}', 'HomeController@showUserProfile')->name('userprofile');
+
+// ゲストログイン
+Route::get('/login/guest', 'Auth\LoginController@guestLogin');

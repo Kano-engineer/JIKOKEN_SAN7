@@ -26,6 +26,12 @@
 
 <div class="main-logo">JIKOKEN SAN</div>
 
+<!-- ゲストログイン -->
+<button type="submit" class="btn btn-secondary guest-btn">
+     <a href="/login/guest">Guest Login</a>
+</button>
+
+
 <div class="main-text">
     <p class="main-dear">強くなるための努力を惜しまないあなたへ。</p>
     <p>JIKOKENさんと可視化してみませんか？日々の努力を客観視すれば、強くなるための近道が見えるかも。</p>
